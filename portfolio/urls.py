@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings #import settings , medi_url , medi_root
 from django.conf.urls.static import static #import the hall app , static
+import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',jobs.views.home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
