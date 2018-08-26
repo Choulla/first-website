@@ -133,3 +133,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/' 
 #fblast media momkin dir ay hajams media li fo9 mat9ishach
+
+try: 
+    from local_settings import * 
+except ImpotError:
+    pass
