@@ -1,4 +1,4 @@
-
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+    <title>Mohamed Choulla</title>
 
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|El+Messiri" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
@@ -30,8 +34,8 @@
   	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
    			 <div class="navbar-nav ml-auto">
      			<a class="nav-item nav-link" href="#">Facebook</a>
-     			 <a class="nav-item nav-link" href="#">Resume</a>
-     			 <a class="nav-item nav-link" href="#">Blog</a>
+     			 <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+     			 <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
     		</div>
   </div>
 </nav>
@@ -43,10 +47,16 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Hi! I am Choulla Mohamed</h1>
+          <h1 class="jumbotron-heading text-arabic">السلام , أنا محمد شولا </h1> <br />
           <p class="lead text-muted">I am in way to create my second website with python frameword | django , this website is showing me , my projetc , design and so one , hope enjoy the serfing :D !</p>
+          
+          <p class="text-arabic">أنا في طريقي لإنشاء موقعي الثاني بإستخدام بيئة عمل بايتون , هذا الموقع تقديمي لنفسي , مشاريعي , تصاميم , أتمنى أن تستمتعوا بالتجول به </p>
           <p>
             <a href="mailto:mohammedweb4@gmail.com" class="btn btn-primary my-2">Main Me !</a>
+
           </p>
+
+          <img src="{% static 'me.jpg' %}" height="300" />
         </div>
       </section>
 
