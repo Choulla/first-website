@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
         'USER':'postgres',
-        'PASSWORD':'9r3atlma1999',
+        'PASSWORD':'9r3atlma1999', 
         'HOST':'localhost',
         'PORT':'5432',
     }
@@ -134,7 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/' 
 #fblast media momkin dir ay hajams media li fo9 mat9ishach
 
-# try: 
-#     from .local_settings import * 
-# except ImpotError:
-#     pass
+try: 
+    from .local_settings import * 
+except ImpotError:
+    pass
